@@ -1,31 +1,32 @@
-
 import java.util.Scanner;
 
-/**
- * quiz
- */
 public class quiz {
-    static int count = 0;
-    Scanner sc = new Scanner(System.in);
+    static int count = 0; //it is static integer variable, it shows the score of quiz
+    Scanner sc = new Scanner(System.in); //it is used gives a user input in java
 
+    //it is a 1st function of java and it stores the 1st MCQ
     public void  quiz1(){
+        //this was print the MCQ in terminel
         System.out.println("What is a correct syntax to print output?");
         System.out.println("A. System.out.println(\"Hello World\");");
         System.out.println("B. cout << \"Hello World\";");
         System.out.println("C. consol.log(\"Hello World\")");
         System.out.println("D. echo(\"Hello World\")");
+        
+        //This method returns the character at the specified index within the string.
         char ch = sc.next().charAt(0);
+        //switch is used to choose one case
         switch (ch) {
             case 'A':
-                count++;
-                break;
+                count++;//this is incresed by 1.
+                break;//this is break the loop
             case 'B':
                 break;
             case 'C':
                 break;
             case 'D':
                 break;
-            default:
+            default://if case was not matched to user input, then it will execute default statement
                 System.out.println("invalid choice!");
         }
     }
@@ -55,9 +56,9 @@ public class quiz {
         System.out.println("Welcome to the quiz");
         System.out.println("________________________________________________");
         
-        quiz q1 = new quiz();
+        quiz q1 = new quiz();//it is colled function to main function
         q1.quiz1();
         q1.quiz2();
-        System.out.println("your score is : "+ count);
+        System.out.println("your score is : "+ count);//it will shows the totle score
     }
 }
